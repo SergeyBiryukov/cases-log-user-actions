@@ -15,7 +15,7 @@ Log common user actions in ACM Cases: changes to posts, postmeta, and comments t
 
 == Installation ==
 
-1. Upload `cases-new-content-menu` folder to the `/wp-content/plugins/` directory.
+1. Upload `cases-log-user-actions` folder to the `/wp-content/plugins/` directory.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
 
 == Changelog ==
