@@ -5,7 +5,7 @@ Plugin URI: http://wpcases.com/
 Description: Лог действий пользователей.
 Author: Sergey Biryukov, Ivan Vinogradov
 Author URI: http://profiles.wordpress.org/sergeybiryukov/
-Version: 0.1
+Version: 0.1.1
 */
 
 class Cases_Log_User_Actions {
@@ -78,11 +78,12 @@ class Cases_Log_User_Actions {
 	}
 
 	function transition_post_status( $new_status, $old_status, $post ) {
-		$this->save_data( $post->ID, 'post', __FUNCTION__, compact( 'old_status', 'new_status' ) );
+		$this->save_data( $post->ID, $post->post_type, __FUNCTION__, compact( 'old_status', 'new_status' ) );
 	}
 
 	function delete_post( $post_id ) {
-		$this->save_data( $post->ID, 'post', __FUNCTION__ );
+		$post = get_post( $post_id );
+		$this->save_data( $post->ID, $post->post_type, __FUNCTION__ );
 	}
 
 	function added_post_meta( $mid, $object_id, $meta_key, $meta_value ) {
