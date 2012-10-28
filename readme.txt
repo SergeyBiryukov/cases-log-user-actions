@@ -1,4 +1,4 @@
-=== Kernel. Log User Actions ===
+=== Cases. Kernel. Log User Actions ===
 Contributors: SergeyBiryukov, IvanVinogradov
 Tags: cases, actions, logs
 Requires at least: 3.0
